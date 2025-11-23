@@ -1,0 +1,54 @@
+{
+  "topic": "i have made i new mobile phone which can make person's lifestlye easy interm of connectivity give idea",
+  "duration": "2-3 minutes",
+  "style": "Modern, clean, professional",
+  "scenes": [
+    {
+      "scene": 1,
+      "duration": "10 seconds",
+      "visual": "Eye-catching opening hook with dynamic text animation",
+      "audio": "Upbeat background music",
+      "text": "**TITLE: \"Unlock Seamless Living: The Phone That Reimagines Connectivity\"**"
+    },
+    {
+      "scene": 2,
+      "duration": "90 seconds",
+      "visual": "Product showcase with smooth transitions, lifestyle footage",
+      "audio": "Soft background music, clear voiceover",
+      "text": "Core content explaining benefits and features"
+    },
+    {
+      "scene": 3,
+      "duration": "30 seconds",
+      "visual": "Strong call-to-action with website/link overlay",
+      "audio": "Music crescendo",
+      "text": "Clear CTA with website and offer details"
+    }
+  ],
+  "visualElements": [
+    "High-quality product shots",
+    "Lifestyle imagery showing usage",
+    "Text overlays with key benefits",
+    "Brand colors: Purple gradient (#667eea to #764ba2)",
+    "Smooth transitions between scenes"
+  ],
+  "voiceoverTone": "Friendly, confident, informative",
+  "musicStyle": "Modern, uplifting, not too fast",
+  "textOverlays": [
+    "Hook line at beginning",
+    "Key benefits as bullet points",
+    "Website URL and discount code at end"
+  ],
+  "exportFormat": "MP4, 1080x1920 (vertical for social media)",
+  "platforms": [
+    "Instagram Reels",
+    "TikTok",
+    "YouTube Shorts"
+  ],
+  "recommendedTools": [
+    "Canva (Free) - Use as storyboard guide",
+    "Kapwing (Free tier) - Simple video editing",
+    "InVideo (Free tier) - Text-to-video",
+    "CapCut (Free) - Mobile video editing"
+  ]
+}

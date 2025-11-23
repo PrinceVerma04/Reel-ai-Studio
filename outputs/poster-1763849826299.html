@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1080px;
+            height: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
+            overflow: hidden;
+        }
+        .poster-content {
+            text-align: center;
+            color: white;
+            padding: 80px;
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+        }
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            top: -150px;
+            left: -150px;
+        }
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: -100px;
+        }
+        .topic {
+            font-size: 68px;
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hook {
+            font-size: 32px;
+            font-weight: 400;
+            opacity: 0.95;
+            line-height: 1.5;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .brand {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 22px;
+            opacity: 0.85;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .accent-line {
+            width: 100px;
+            height: 4px;
+            background: white;
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative-circle circle-1"></div>
+    <div class="decorative-circle circle-2"></div>
+    <div class="poster-content">
+        <div class="topic">i have made i new mobile phone which can make person&#039;s lifestlye easy interm of connectivity give idea</div>
+        <div class="accent-line"></div>
+        <div class="hook">Transform your content strategy today!</div>
+    </div>
+    <div class="brand">AI CONTENT ENGINE</div>
+</body>
+</html>
