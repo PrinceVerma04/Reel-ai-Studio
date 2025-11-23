@@ -1,84 +1,301 @@
-# Gemini Content Engine — Full Stack
-<img width="1919" height="957" alt="Screenshot 2025-11-23 123710" src="https://github.com/user-attachments/assets/e486da7c-b7dc-4962-a12f-fdbe59ccf97f" />
+# Reel AI Studio — AI-Powered Content Creation Platform
 
-## Here you can get the working video for this project
-https://drive.google.com/drive/folders/1nZSO8fgUNLoZFJFx-HJGSB4gG_kjNMQp?usp=sharing
+<img width="1919" height="957" alt="Reel AI Studio Interface" src="https://github.com/user-attachments/assets/e486da7c-b7dc-4962-a12f-fdbe59ccf97f" />
+
+## 🎥 Demo Video
+Watch the full working demo: [Google Drive](https://drive.google.com/drive/folders/1nZSO8fgUNLoZFJFx-HJGSB4gG_kjNMQp?usp=sharing)
+
+## 🚀 Live Demo
+**Deployed on Railway:** [https://reel-ai-studio-production.up.railway.app](https://reel-ai-studio-production.up.railway.app)
+<img width="1821" height="831" alt="Screenshot 2025-11-23 144023" src="https://github.com/user-attachments/assets/a182eb3c-4bd2-4eda-9be8-ba67e1d84bf5" />
 
 
-Lightweight full-stack demo that generates content strategies, images and short videos using Google Gemini / Veo models. Includes a Node.js backend (Express) and a static frontend (index.html).
+---
 
-## Features
-- Generate full content strategy text (12-section structure)
-- Automatic parsing into structured sections
-- Auto-generate images (Gemini/Imagen) and short preview videos (Veo)
-- Downloadable markdown output and media assets in `./outputs`
-- Task-oriented endpoints for reel scripts, hooks, thumbnails, etc.
+## 📖 Overview
 
-## Prerequisites
+Full-stack AI content generation platform powered by Google Gemini 2.5 Flash. Create professional Instagram Reel content including scripts, hooks, captions, hashtags, visual concepts, and more — all generated instantly with AI.
+
+### ✨ Features
+
+- **14 AI-Powered Tasks**: Reel scripts, hooks, captions, hashtags, trends, visuals, thumbnails, music strategy, content series, engagement tactics, posting strategy, analytics, competitor analysis, and storyboards
+- **Batch Mode**: Generate multiple content pieces with one prompt
+- **Dark/Light Theme**: Toggle between themes for comfortable viewing
+- **Real-time Generation**: Instant AI responses using Gemini 2.5 Flash
+- **Professional UI**: Modern, responsive interface with smooth animations
+- **Export Ready**: Copy generated content directly or save for later
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend**: Node.js, Express.js
+- **Frontend**: Vanilla JavaScript, HTML5, CSS3
+- **AI Model**: Google Gemini 2.5 Flash
+- **Deployment**: Railway
+- **Package Manager**: npm
+
+---
+
+## 📋 Prerequisites
+
 - Node.js v18+ (ESM support)
-- npm
-- Valid Gemini API key with access to the used models
+- npm or yarn
+- Google Gemini API key ([Get one here](https://aistudio.google.com/apikey))
 
-## Install
-1. Open a terminal in the project folder:
-   cd "C:\Users\saish\OneDrive\Desktop\Ed-Tech\Project\gemini-content-engine"
-2. Install dependencies:
-   npm install
+---
 
-Note: Ensure the package.json dependency name for the Google SDK matches the SDK you installed (e.g., `@google/generative-ai` or `@google/genai`).
+## 🚀 Local Development
 
-## Environment
-Create a `.env` at the project root with:
-GEMINI_API_KEY=your_real_api_key_here
+### 1. Clone the Repository
+git clone https://github.com/PrinceVerma04/Reel-ai-Studio.git
+cd Reel-ai-Studio
+
+### 2. Install Dependencies
+
+
+### 3. Set Up Environment Variables
+
+Create a `.env` file in the project root:
+
+GEMINI_API_KEY=your_gemini_api_key_here
 PORT=3000
 
-Important: Never commit your real API key to source control.
 
-## Run
-Start the server:
+⚠️ **Important**: Never commit your `.env` file to version control!
+
+### 4. Run the Development Server
+
 npm start
 
-Open the frontend:
-http://localhost:3000/
+### 5. Open in Browser
 
-Health check:
-GET http://localhost:3000/ping
+Navigate to: `http://localhost:3000`
 
-## Main API Endpoints
-- POST /generate-content
-  - Body: { "topic": "Your topic here" }
-  - Response: { success, content, sections, downloadUrl, stats }
+---
 
-- POST /generate-task
-  - Body: { "task": "<taskId>", "topic": "..." }
-  - Use /tasks to list available tasks
+## 🌐 Deployment to Railway
 
-- GET /tasks
-  - Lists available reel/task types
+### Step-by-Step Deployment Guide
 
-- GET /outputs/<file>
-  - Serves generated images/videos/markdown
+#### 1. Push to GitHub
 
-- GET /download/:filename
-  - Triggers file download from outputs directory
+Ensure your code is on GitHub:
 
-## Frontend
-Static UI in `index.html` interacts with the backend POST endpoints. Adjust `API_URL` if running backend on a different host/port.
 
-## Troubleshooting
-- "GEMINI_API_KEY not found": set GEMINI_API_KEY in `.env` and restart server.
-- Empty/invalid AI responses: verify API key, model names, and installed SDK version — SDK response shapes can differ between versions.
-- 404 or model errors: ensure model names in server code match models available to your API key (e.g., `gemini-2.5-flash`, `gemini-2.5-pro`, `imagen-3.0-generate-001`, `veo-3.1-generate-preview`).
-- If using a different SDK package name, update imports in `server.js` accordingly and re-run `npm install`.
+#### 2. Sign Up for Railway
 
-## Notes & Security
-- Keep the `.env` file out of source control. Add `.env` to `.gitignore`.
-- Generated files are saved to `./outputs`. Clean up sensitive assets as needed.
-- Adjust body parser limits (currently `50mb`) if you handle large media payloads.
+- Go to [Railway.app](https://railway.app)
+- Sign up with your GitHub account
+- Authorize Railway to access your repositories
 
-## Contributing / Extending
-- Swap models or tune generationConfig/generation parameters in `server.js`.
-- Add authentication or job queue for heavy video generation tasks.
-- Improve parsing or map sections to richer UI components.
+#### 3. Create New Project
 
-License: MIT
+- Click **"New Project"**
+- Select **"Deploy from GitHub repo"**
+- Choose **"Reel-ai-Studio"** from your repositories
+
+#### 4. Configure Environment Variables
+
+- Go to your project's **Variables** tab
+- Add the following variable:
+  - **Key**: `GEMINI_API_KEY`
+  - **Value**: Your Gemini API key
+- Click **"Add"**
+
+#### 5. Deploy
+
+Railway will automatically:
+- Install dependencies (`npm install`)
+- Start your server (`npm start`)
+- Deploy your application
+
+#### 6. Generate Domain
+
+- Go to **Settings** → **Networking**
+- Click **"Generate Domain"**
+- Your app will be live at: `https://your-app-name.up.railway.app`
+
+#### 7. Verify Deployment
+
+Test these endpoints:
+- **Homepage**: `https://your-app-name.up.railway.app/`
+- **Health Check**: `https://your-app-name.up.railway.app/ping`
+- **Tasks API**: `https://your-app-name.up.railway.app/tasks`
+
+---
+
+## 📡 API Endpoints
+
+### Main Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/` | Serve main application |
+| `GET` | `/ping` | Health check |
+| `GET` | `/tasks` | List all available tasks |
+| `POST` | `/generate-task` | Generate content for specific task |
+
+### Generate Task Request
+
+
+### Response Example
+
+
+---
+
+## 🎨 Available Tasks
+
+1. **Reel Script** - Complete script with hook, content, and CTA
+2. **Hook Ideas** - 10 attention-grabbing opening lines
+3. **Captions** - Caption variations with emojis and hashtags
+4. **Hashtag Strategy** - Strategic hashtag combinations
+5. **Trending Ideas** - Current viral formats
+6. **Visual Concepts** - Shot-by-shot visual planning
+7. **Thumbnail Design** - Eye-catching thumbnail concepts
+8. **Audio Strategy** - Music and sound recommendations
+9. **Content Series** - 7-part serialized content plan
+10. **Engagement Tactics** - Interactive elements to boost engagement
+11. **Posting Strategy** - Optimal timing and frequency plan
+12. **Performance Tips** - Metrics and optimization guidance
+13. **Competitor Analysis** - Market insights and differentiation
+14. **Video Storyboard** - Complete shot-by-shot storyboard
+
+---
+
+## 🔧 Configuration
+
+### Gemini Model Settings
+
+Default configuration in `server.js`:
+
+
+### Customization
+
+- **Temperature** (0.0-1.0): Controls randomness (0.9 = creative)
+- **topK**: Number of highest probability tokens to consider
+- **topP**: Cumulative probability threshold
+- **maxOutputTokens**: Maximum response length
+
+---
+
+## 🛡️ Security Best Practices
+
+- ✅ Never commit `.env` file (already in `.gitignore`)
+- ✅ Rotate API keys regularly
+- ✅ Use environment variables for all sensitive data
+- ✅ Monitor Railway usage to avoid unexpected charges
+- ✅ Implement rate limiting for production use
+
+---
+
+## 📊 Railway Free Tier Limits
+
+- **$5 credit/month** (~500 execution hours)
+- Service sleeps after **15 minutes** of inactivity
+- Automatic wake on request
+- Upgrade available for 24/7 uptime
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**1. "GEMINI_API_KEY not found"**
+- Ensure `.env` file exists with correct API key
+- Restart the server after adding environment variables
+
+**2. Railway deployment fails**
+- Check build logs in Railway dashboard
+- Verify `package.json` has correct dependencies
+- Ensure environment variables are set in Railway
+
+**3. API returns 500 errors**
+- Verify Gemini API key is valid
+- Check if you've exceeded API quota
+- Review Railway logs for detailed error messages
+
+**4. Website shows 404**
+- Ensure `index.html` is in project root
+- Check if `express.static('.')` is configured correctly
+
+**5. Generation is slow**
+- Normal for first request (cold start)
+- Subsequent requests are faster
+- Consider upgrading Railway plan for better performance
+
+---
+
+## 🔄 Updating Your Deployment
+
+After making changes:
+
+
+Railway will automatically redeploy your application.
+
+---
+
+## 📁 Project Structure
+
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📝 Future Enhancements
+
+- [ ] Image generation with Imagen 3
+- [ ] Video generation with Veo
+- [ ] User authentication
+- [ ] Save/export content history
+- [ ] Multi-language support
+- [ ] Custom AI model fine-tuning
+- [ ] Collaborative workspace
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Google Gemini** for providing the AI models
+- **Railway** for free hosting platform
+- **Font Awesome** for icons
+- **Express.js** for backend framework
+
+---
+
+## 📞 Support
+
+For issues, questions, or suggestions:
+
+- **GitHub Issues**: [Create an issue](https://github.com/PrinceVerma04/Reel-ai-Studio/issues)
+- **Email**: [tovermaprince@gmail.com](mailto:tovermaprince@gmail.com)
+- **LinkedIn**: [@Prince Verma](https://www.linkedin.com/in/princeverma0411/)
+
+---
+
+## ⭐ Star This Repository
+
+If you find this project useful, please consider giving it a star on GitHub!
+
+---
+
+**Made with ❤️ by Prince Verma**
+
+*Last updated: November 23, 2025*
