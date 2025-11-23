@@ -1,4 +1,9 @@
 # Gemini Content Engine — Full Stack
+<img width="1919" height="957" alt="Screenshot 2025-11-23 123710" src="https://github.com/user-attachments/assets/e486da7c-b7dc-4962-a12f-fdbe59ccf97f" />
+
+## Here you can get the working video for this project
+https://drive.google.com/drive/folders/1nZSO8fgUNLoZFJFx-HJGSB4gG_kjNMQp?usp=sharing
+
 
 Lightweight full-stack demo that generates content strategies, images and short videos using Google Gemini / Veo models. Includes a Node.js backend (Express) and a static frontend (index.html).
 
