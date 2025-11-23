@@ -311,6 +311,7 @@ app.use((err, req, res, next) => {
         error: 'Internal server error'
     });
 });
+// ... rest of your code ...
 
 app.listen(PORT, async () => {
     await ensureOutputDir();
@@ -326,3 +327,6 @@ app.listen(PORT, async () => {
     console.log('='.repeat(70));
     console.log('\n💡 Ready!\n');
 });
+
+// ✅ ADD THIS LINE FOR VERCEL
+export default app;
