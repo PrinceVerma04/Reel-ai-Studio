@@ -1,13 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    }
-  ],
+  "buildCommand": "echo 'No build needed'",
   "rewrites": [
     { "source": "/generate-task", "destination": "/api/generate-task" },
-    { "source": "/tasks", "destination": "/api/tasks" }
+    { "source": "/tasks", "destination": "/api/tasks" },
+    { "source": "/", "destination": "/public/index.html" }
   ]
 }
